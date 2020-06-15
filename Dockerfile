@@ -12,14 +12,14 @@ RUN echo "http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositorie
 	hplip \
 	avahi \
 	inotify-tools \
-	python \
-	python-dev \
+	python3 \
+	python3-dev \
 	py-pip \
 	build-base \
 	wget \
 	rsync \
-	&& pip --no-cache-dir install --upgrade pip \
-	&& pip install pycups \
+	&& pip3 --no-cache-dir install --upgrade pip \
+	&& pip3 install pycups \
 	&& rm -rf /var/cache/apk/*
 
 # This will use port 631
