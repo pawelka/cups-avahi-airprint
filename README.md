@@ -47,6 +47,7 @@ docker run -d --rm --name cups --net <your macvlan> \
 * CUPS will be configurable at http://[host ip]:631 using the CUPSADMIN/CUPSPASSWORD.
 * Make sure you select `Share This Printer` when configuring the printer in CUPS.
 * ***After configuring your printer, you need to close the web browser for at least 60 seconds. CUPS will not write the config files until it detects the connection is closed for as long as a minute.***
+* If color printing doesn't work, try adding "<txt-record>Color=T</txt-record>" in the .service file
 
 
 
