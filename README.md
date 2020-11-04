@@ -37,23 +37,12 @@ docker run --name cups --restart unless-stopped  --net host\
 
 ## Building
 
-### If you want to build the files yourself:
-Build your image using the docker build command, where DH_ACC is your dockerhub account and DH_REPO is your dockerhub repo, and $TAG is the image tag.
 ```
-docker build -t $DH_ACC/DH_REPO:$TAG . 
+git clone https://github.com/Jack187/cups-avahi-airprint.git
+cd cups-avahi-airprint
+docker build \
+  --no-cache \
+  --pull \
+  -t cups-avahi-airprint .
 ```
-In my case:
-```
-docker build -t gmkey/cups-avahi-airprint:latest .
-
-### And push your files to dockerhub by executing the 
-Now, you can push this image to your hub by executing the docker push command.
-```
-sudo docker push $DOCKER_ACC/$DOCKER_REPO:$TAG
-
-In my case:
-```
-sudo docker push gmkey/cups-avahi-airprint:latest
-```
-
 
