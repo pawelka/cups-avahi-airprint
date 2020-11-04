@@ -30,7 +30,19 @@ docker build \
 
 ## Running
 
-### Example run command:
+### Example:
+First create the macvlan network.
+
+```
+docker network create -d macvlan \
+  -o parent=<interfact, e.g. eth0>   
+  --subnet 192.168.1.0/24   
+  --gateway 192.168.1.1   
+  --ip-range 192.168.1.192/27
+  --aux-address 'host=192.168.1.223'  # optional, to exclude specific IPs for containers
+  <your macvlan name>
+```
+
 For testing purposes. Container will be removed once stopped (--rm).
 
 ```
