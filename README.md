@@ -14,8 +14,8 @@ This Alpine-based Docker image runs a CUPS instance with HPLIP drivers that is m
 * `CUPSADMIN`: the CUPS admin user you want created
 * `CUPSPASSWORD`: the password for the CUPS admin user
 
-### Ports/Network:
-* Must be run on host network. This is required to support multicasting which is needed for Airprint.
+### Network:
+* The macvlan driver is used, to host the container with a specific IP in the local subnet.
 
 ## Building
 
