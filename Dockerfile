@@ -45,3 +45,9 @@ RUN sed -i 's/Listen localhost:631/Listen 0.0.0.0:631/' /etc/cups/cupsd.conf && 
 	sed -i 's/.*enable\-dbus=.*/enable\-dbus\=no/' /etc/avahi/avahi-daemon.conf && \
 	echo "ServerAlias *" >> /etc/cups/cupsd.conf && \
 	echo "DefaultEncryption Never" >> /etc/cups/cupsd.conf
+	
+# Install lexmark ppd files
+RUN cd /drv && \
+	tar -xf Lexmark-ADY-PPD-Files.tar && \
+	cd /drv/ppd_files && \
+	./install_ppd.sh
