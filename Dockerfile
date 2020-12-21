@@ -25,9 +25,9 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 # This will use port 631
 EXPOSE 631
 
-# We want a mount for these
-VOLUME /config
-VOLUME /services
+# We want a mount for these (comment to allow home assistant add create links instead)
+#VOLUME /config
+#VOLUME /services
 
 # Add scripts
 ADD root /
