@@ -9,6 +9,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/reposit
 	cups-filters \
 	cups-dev \
 	ghostscript \
+	net-snmp-libs \
 	hplip \
 	avahi \
 	inotify-tools \
